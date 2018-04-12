@@ -1,0 +1,61 @@
+Scrips
+a)
+3-Asignar a los usuarios admin e invitado
+rol_admin
+rol_invitado
+
+2-
+rol_admin   ------>todos los roles
+rol_invitado - ----->crear sesiones
+
+1-Definicion de usuarios
+-BM__proy_invitado
+-BS_proy_admin  ---->Dueño de todo
+
+b)
+1-código DDL para crear tablas
+ -no en ER-Studio por tanto no en otro simila
+ -restricciones con nombre asignado
+2- usar UNIQUE, CHECK ----no hay restricción en cuanto al número de restricciones creadas
+,PRIMARY KEY,FOREIGN KEY
+
+3-incluir DEFAULT---->algunas tablas al menos un caso
+
+4-un caso emplear una columna virtual
+Losatributos derivados son excelentes candidatos para crear tablas virtuales
+
+c)uso de una o más tablas temporales
+1*crear una tabla temporal para aplicar un proceso de desnormalización e insertar los datos de forma temporal
+
+1*Jerarquía
+Super tipo – Subtipos. 
+Se decide crear una tablatemporal que contendrá todos los datos de la Jerarquía
+
+2*Simular un carrito de compras.
+cuando el cliente decida comprar, los datos se consultan de la tabla temporal y se insertan en las tablas permanentes.
+3*cálculos de varias tablas permanentes
+como son: promedios, costos totales, descuentos, ventas, etc.
+
+guardar en tabla temporal para ser consultados por algún cliente.
+
+d) s-05-secuencias.sql
+definición de todas las secuencias necesarias para poder insertar registros en tablas que requieran generación de valores secuenciales.
+Estos valores los elige el equipo.
+
+e) s-06-carga-inicial.sql
+1*algunos datos de prueba y carga inicial
+para ilustrar la base de datos.
+
+2*probar mínimo 15 registros cada tabla
+3*uso de las secuencias para realizar las inserciones
+4*Nota: un valor generado por una secuencia pudiera emplearse varias veces para insertar registros con llaves foráneas
+
+f)s-07-main.sql
+1-invocar a todos los scripts (hora de entrega del proyecto)
+2-utilizar usuarios
+Oracle del sistema operativo y 
+SYS (de la base de datos) solo para cuestiones administrativas
+
+g) s-08-consultas.sql
+1*10 o más consultas
+2*uso de joins, funciones de agregación, algebra relacional y subconsultas
