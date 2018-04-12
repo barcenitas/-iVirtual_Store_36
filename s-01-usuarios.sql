@@ -21,3 +21,32 @@ y
 rol_invitado
 respectivamente.*/
 
+--1 Definicion de usuarios /crear usuarios
+CONNECT sys/system AS sysdba
+
+CREATE USER bs_proy_admin IDENTIFIED BY 1234 
+       DEFAULT TABLESPACE data --system 
+       TEMPORARY TABLESPACE temp
+       QUOTA UNLIMITED ON data;----system
+
+CREATE ROLE rol_admin;
+
+GRANT CREATE session, CREATE table, CREATE view, 
+      CREATE procedure,CREATE synonym,
+      ALTER table, ALTER view, ALTER procedure,ALTER synonym,
+      DROP table, DROP view, DROP procedure,DROP synonym,
+      TO conn;
+
+GRANT rol_admin TO bs_proy_admin;
+--------------------------------------------------------------------------------------------------
+CREATE USER bm_proy_invitado IDENTIFIED BY 1234 
+       DEFAULT TABLESPACE data --system 
+       TEMPORARY TABLESPACE temp
+       QUOTA 1000M ON data;----system
+
+CREATE ROLE rol_invitado;
+
+GRANT CREATE session
+      TO conn;
+      
+GRANT rol_invitado TO bm_proy_invitado;
