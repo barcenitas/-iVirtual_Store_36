@@ -85,33 +85,33 @@ INSERT INTO Producto(id_Producto,folioAlfanumerico,tipoProducto,numVistas,precio
 ---
 --4_Pelicula
 ---
-INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(1,'La forma del agua','Thriller','Duracion','B15','Digital');
-INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(2,'Pelicula 2','Thriller','Duracion','B15','Digital');
-INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(3,'Pelicula 3','Thriller','Duracion','B15','Digital');
-INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(4,'Pelicula 4','Thriller','Duracion','B15','Digital');
-INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(5,'Pelicula 5','Thriller','Duracion','B15','Digital');
+INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(1,'La forma del agua','Thriller',1.05,'B15','Digital');
+INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(2,'Pelicula 2','Thriller',1.25,'B15','Digital');
+INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(3,'Pelicula 3','Thriller',1.48,'B15','Digital');
+INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(4,'Pelicula 4','Thriller',1.40,'B15','Digital');
+INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(5,'Pelicula 5','Thriller',1.35,'B15','Digital');
 
-INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(6,'Pelicula 2','Thriller','Duracion','B15','DVD');
-INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(7,'Pelicula 3','Thriller','Duracion','B15','Digital');
-INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(8,'Pelicula 4','Thriller','Duracion','B15','Blue Ray');
-INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(9,'Pelicula 5','Thriller','Duracion','B15','Digital');
-INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(10,'Pelicula 5','Thriller','Duracion','B15','Digital');
+INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(6,'Pelicula 2','Thriller',1.98,'B15','DVD');
+INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(7,'Pelicula 3','Thriller',1.87,'B15','Digital');
+INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(8,'Pelicula 4','Thriller',1.45,'B15','Blue Ray');
+INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(9,'Pelicula 5','Thriller',1.12,'B15','Digital');
+INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(10,'Pelicula 5','Thriller',1.84,'B15','Digital');
 
-INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(11,'Pelicula 2','Thriller','Duracion','B15','DVD');
-INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(12,'Pelicula 3','Thriller','Duracion','B15','Digital');
-INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(13,'Pelicula 4','Thriller','Duracion','B15','Blue Ray');
-INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(14,'Pelicula 5','Thriller','Duracion','B15','Digital');
-INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(15,'Pelicula 5','Thriller','Duracion','B15','Digital');
+INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(11,'Pelicula 2','Thriller',1.18,'B15','DVD');
+INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(12,'Pelicula 3','Thriller',1.96,'B15','Digital');
+INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(13,'Pelicula 4','Thriller',1.21,'B15','Blue Ray');
+INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(14,'Pelicula 5','Thriller',1.18,'B15','Digital');
+INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(15,'Pelicula 5','Thriller',1.09,'B15','Digital');
 
 ---
 --5_AlbumMusical
 ---
 
-INSERT INTO AlbumMusical(Producto_id_Producto,NomCancion,Artista,Album,Disquera) VALUES(16,'La calma','Pastora Soler','La calma','EuroMusic');
-INSERT INTO AlbumMusical(Producto_id_Producto,NomCancion,Artista,Album,Disquera) VALUES(16,'La calma','Pastora Soler','La calma','EuroMusic');
-INSERT INTO AlbumMusical(Producto_id_Producto,NomCancion,Artista,Album,Disquera) VALUES(16,'La calma','Pastora Soler','La calma','EuroMusic');
-INSERT INTO AlbumMusical(Producto_id_Producto,NomCancion,Artista,Album,Disquera) VALUES(16,'La calma','Pastora Soler','La calma','EuroMusic');
-INSERT INTO AlbumMusical(Producto_id_Producto,NomCancion,Artista,Album,Disquera) VALUES(16,'La calma','Pastora Soler','La calma','EuroMusic');
+INSERT INTO AlbumMusical(Producto_id_Producto,NomCancion,Artista,Album,Disquera) VALUES(1,'La calma','Pastora Soler','La calma','EuroMusic');
+INSERT INTO AlbumMusical(Producto_id_Producto,NomCancion,Artista,Album,Disquera) VALUES(2,'Caminos','yunkis','Lafauna','iStore');
+INSERT INTO AlbumMusical(Producto_id_Producto,NomCancion,Artista,Album,Disquera) VALUES(3,'La soledad','Chuminos','Eliote','MCD');
+INSERT INTO AlbumMusical(Producto_id_Producto,NomCancion,Artista,Album,Disquera) VALUES(4,'Hoy','Astrd','Sinfo','PPCDSALC');
+INSERT INTO AlbumMusical(Producto_id_Producto,NomCancion,Artista,Album,Disquera) VALUES(5,'Otro dia','KF','RIKS','VFDD');
 
 ---
 ---6_VideoJuego
@@ -327,4 +327,3 @@ INSERT INTO HistoricoPrecioProducto(id_PrecioHistorico,Producto_id_Producto,Peri
 INSERT INTO HistoricoPrecioProducto(id_PrecioHistorico,Producto_id_Producto,PeriodoPrecio,Precio) VALUES (35,35,TO_DATE('2018/04/05','YYYY/MM/DD'),300);
 ---Cerrando Transacción iVirtual Store 36
 commit;
-
