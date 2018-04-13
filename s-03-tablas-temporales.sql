@@ -32,3 +32,14 @@ una tabla temporal para ser
 consultados por algún cliente.
 
 */
+
+
+CREATE GLOBAL TEMPORARY TABLE carrito(
+TipoProducto            VARCHAR2(40),
+NombreProducto          VARCHAR2(40),
+Precio				  	NUMBER(15,2)
+)ON COMMIT PRESERVE ROWS; 
+
+SELECT * FROM carrito; --solo hay tablas
+INSERT TO carrito VALUES('Pelicula','Ready Player One',1200);
+COMMIT; --confirmamos y hacemos visible los cambios
