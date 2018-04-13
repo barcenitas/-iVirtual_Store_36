@@ -4,7 +4,7 @@
 **************
 */
 
---Tabla: Producto
+--Tabla: 1_Producto
 CREATE TABLE Producto (
     id_producto   NUMBER(10,0) NOT NULL,
     folioAlfanumerico   VARCHAR2(13)    NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE Producto (
     CONSTRAINT p_folioAlfanumerico_uk UNIQUE (folioAlfanumerico)
 );
 
---Tabla: Pelicula
+--Tabla: 2_Pelicula
 CREATE TABLE Pelicula (
     Producto_id_producto    NUMBER(10, 0)   NOT NULL,
     nomPeli                 VARCHAR2(45)    NOT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE Pelicula (
       REFERENCES Producto(id_producto)
 );
 
---Tabla: AlbumMusical
+--Tabla: 3_AlbumMusical
 CREATE TABLE AlbumMusical (
     Producto_id_producto    NUMBER(10, 0)   NOT NULL,
     nomCancion              VARCHAR2(45)    NOT NULL,
@@ -44,7 +44,7 @@ CREATE TABLE AlbumMusical (
       REFERENCES Producto(id_producto)
 );
 
---Tabla: VideoJuego
+--Tabla: 4_VideoJuego
 CREATE TABLE VideoJuego (
     Producto_id_producto    NUMBER(10, 0)   NOT NULL,
     nomVJuego               VARCHAR2(45)    NOT NULL,
@@ -55,7 +55,7 @@ CREATE TABLE VideoJuego (
       REFERENCES Producto(id_producto)
 );
 
---Tabla: HistoricoPrecioProducto
+--Tabla: 5_HistoricoPrecioProducto
 CREATE TABLE HistoricoPrecioProducto (
     id_precioHistorico      NUMBER(10, 0)   NOT NULL,
     Producto_id_producto    NUMBER(10, 0)   NOT NULL,
@@ -67,7 +67,7 @@ CREATE TABLE HistoricoPrecioProducto (
       REFERENCES Producto(id_producto)
 );
 
---Tabla: FormaPago
+--Tabla: 6_FormaPago
 CREATE TABLE FormaPago (
     id_formaPago    NUMBER(10, 0)   NOT NULL,
     nomBanco        VARCHAR2(45)    NOT NULL,
@@ -76,7 +76,7 @@ CREATE TABLE FormaPago (
     CONSTRAINT fp_id_formaPago_pk PRIMARY KEY (id_formaPago)
 );
 
---Tabla: Cliente
+--Tabla: 7_Cliente
 CREATE TABLE Cliente (
     id_cliente              NUMBER(10, 0)   NOT NULL,
     FormaPago_id_formaPago  NUMBER(10, 0)   NOT NULL,
@@ -97,14 +97,14 @@ CREATE TABLE Cliente (
       REFERENCES FormaPago(id_formaPago)
 );
 
---Tabla: ModAdquisicion
+--Tabla: 8_ModAdquisicion
 CREATE TABLE ModAdquisicion (
     id_modAdquisicion   NUMBER(10, 0)   NOT NULL,
     tipoEnvio           VARCHAR2(45)    NOT NULL,
     CONSTRAINT ma_id_modAdquisicion_pk PRIMARY KEY (id_modAdquisicion)
 );
 
---Tabla: Streaming
+--Tabla: 9_Streaming
 CREATE TABLE Streaming (
     ModAdquisicion_id_modAdquisicion  NUMBER(10, 0)   NOT NULL,
     url                               VARCHAR2(100)   NOT NULL,
@@ -115,7 +115,7 @@ CREATE TABLE Streaming (
       REFERENCES ModAdquisicion(id_modAdquisicion)
 );
 
---Tabla: Transferencia
+--Tabla: 10_Transferencia
 CREATE TABLE Transferencia (
     FormaPago_id_formaPago  NUMBER(10, 0)   NOT NULL,
     clabe                   NUMBER(30, 0)   NOT NULL,
@@ -125,7 +125,7 @@ CREATE TABLE Transferencia (
       REFERENCES FormaPago(id_formaPago)
 );
 
---Tabla: TarCredito
+--Tabla: 11_TarCredito
 CREATE TABLE TarCredito (
     FormaPago_id_formaPago  NUMBER(10, 0)   NOT NULL,
     numTarjeta              NUMBER(20, 0)   NOT NULL,
@@ -141,7 +141,7 @@ CREATE TABLE TarCredito (
       REFERENCES FormaPago(id_formaPago)
 );
 
---Tabla: Factura
+--Tabla: 12_Factura
 CREATE TABLE Factura (
     id_folioFactura         NUMBER(10, 0)   NOT NULL,
     folioOrdenCompra        VARCHAR2(45)    NOT NULL,
@@ -158,7 +158,7 @@ CREATE TABLE Factura (
       REFERENCES FormaPago(id_formaPago)
 );
 
---Tabla: OrdenCompra
+--Tabla: 13_OrdenCompra
 CREATE TABLE OrdenCompra (
     id_ordenCompra                   NUMBER(10, 0)   NOT NULL,
     Cliente_id_cliente               NUMBER(10, 0)   NOT NULL,
@@ -174,7 +174,7 @@ CREATE TABLE OrdenCompra (
       REFERENCES Factura(id_folioFactura)
 );
 
---Tabla: Compra
+--Tabla: 14_Compra
 CREATE TABLE Compra (
     id_compra                   NUMBER(10, 0)   NOT NULL,
     Producto_id_producto        NUMBER(10, 0)   NOT NULL,
@@ -189,7 +189,7 @@ CREATE TABLE Compra (
       REFERENCES OrdenCompra(id_ordenCompra)
 );
 
---Tabla: EnvioPaquete
+--Tabla: 15_EnvioPaquete
 CREATE TABLE EnvioPaquete (
     id_envioPaquete          NUMBER(10, 0)   NOT NULL,
     Factura_id_folioFactura  NUMBER(10, 0)   NOT NULL,
@@ -214,7 +214,7 @@ CREATE TABLE EnvioPaquete (
       REFERENCES Factura(id_folioFactura)
 );
 
---Tabla: Paqueteria
+--Tabla: 16_Paqueteria
 CREATE TABLE Paqueteria (
     ModAdquisicion_id_modAdquisicion NUMBER(10, 0)   NOT NULL,
     EnvioPaquete_id_envioPaquete     NUMBER(10, 0)   NOT NULL,
@@ -228,7 +228,7 @@ CREATE TABLE Paqueteria (
       REFERENCES EnvioPaquete(id_envioPaquete)
 );
 
---Tabla: Seguimiento
+--Tabla: 17_Seguimiento
 CREATE TABLE Seguimiento (
     id_seguimiento               NUMBER(10, 0)   NOT NULL,
     EnvioPaquete_id_envioPaquete NUMBER(10, 0)   NOT NULL,
