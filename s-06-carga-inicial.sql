@@ -55,27 +55,44 @@ INSERT INTO Cliente(id_Cliente,FormaPago_id_FormaPago,Usuario,eMail,password,tel
 
 ---
 ---3_Producto
----
+----
 
-INSERT INTO Producto(id_Producto,folioAlfanum,url,numVistas,nombre,numRepro,precioVenta,Pelicula_id_pelicula,AlbumMusical_id_aMusical,VideoJuego_id_vJuego) VALUES (1,'A1','www.1.com',1,'Pelicula',1000,500,1,null,null);
-INSERT INTO Producto(id_Producto,folioAlfanum,url,numVistas,nombre,numRepro,precioVenta,Pelicula_id_pelicula,AlbumMusical_id_aMusical,VideoJuego_id_vJuego) VALUES (2,'A2','www.2.com',2,'aMusical',1000,300,null,1,null);
-INSERT INTO Producto(id_Producto,folioAlfanum,url,numVistas,nombre,numRepro,precioVenta,Pelicula_id_pelicula,AlbumMusical_id_aMusical,VideoJuego_id_vJuego) VALUES (3,'A3','www.3.com',3,'VideoJuego',1000,900,null,null,1);
 
+-----peliculas
+INSERT INTO Producto(id_Producto,folioAlfanumerico,tipoProducto,numVistas,precioVenta,copiasVendidas,copiasExistentes,copiasDefectuosas) VALUES (6, '6SDF', 'Pelicula', 15, 99.99, 8, 2, 0);
+INSERT INTO Producto(id_Producto,folioAlfanumerico,tipoProducto,numVistas,precioVenta,copiasVendidas,copiasExistentes,copiasDefectuosas) VALUES (7, '7GD', 'Pelicula', 40, 139.99, 4, 2, 0);
+INSERT INTO Producto(id_Producto,folioAlfanumerico,tipoProducto,numVistas,precioVenta,copiasVendidas,copiasExistentes,copiasDefectuosas) VALUES (8, '8GER', 'Pelicula', 45, 89.99, 5, 30, 1);
+INSERT INTO Producto(id_Producto,folioAlfanumerico,tipoProducto,numVistas,precioVenta,copiasVendidas,copiasExistentes,copiasDefectuosas) VALUES (9, '9JYT', 'Pelicula', 15, 99.99, 8, 9, 0);
+INSERT INTO Producto(id_Producto,folioAlfanumerico,tipoProducto,numVistas,precioVenta,copiasVendidas,copiasExistentes,copiasDefectuosas) VALUES (10, '10VFS', 'Pelicula', 4, 110.00, 7, 2, 0);
+
+
+---album musical
+INSERT INTO Producto(id_Producto,folioAlfanumerico,tipoProducto,numVistas,precioVenta,copiasVendidas,copiasExistentes,copiasDefectuosas) VALUES (11, '11SDS', 'Album musical', 48, 305.99, 15, 2, 1);
+INSERT INTO Producto(id_Producto,folioAlfanumerico,tipoProducto,numVistas,precioVenta,copiasVendidas,copiasExistentes,copiasDefectuosas) VALUES (12, '12HTD', 'Album musical', 95, 152.99, 14, 2, 0);
+INSERT INTO Producto(id_Producto,folioAlfanumerico,tipoProducto,numVistas,precioVenta,copiasVendidas,copiasExistentes,copiasDefectuosas) VALUES (13, '13SGS', 'Album musical', 35, 99.99, 45, 30, 1);
+INSERT INTO Producto(id_Producto,folioAlfanumerico,tipoProducto,numVistas,precioVenta,copiasVendidas,copiasExistentes,copiasDefectuosas) VALUES (14, '14GUP', 'Album musical', 94, 175.99, 36, 9, 0);
+INSERT INTO Producto(id_Producto,folioAlfanumerico,tipoProducto,numVistas,precioVenta,copiasVendidas,copiasExistentes,copiasDefectuosas) VALUES (15, '15SJO', 'Album musical', 40, 375.00, 7, 2, 0);
+
+----videojuegos
+INSERT INTO Producto(id_Producto,folioAlfanumerico,tipoProducto,numVistas,precioVenta,copiasVendidas,copiasExistentes,copiasDefectuosas) VALUES (1, '1A', 'Video Juego', 31, 755.99, 40, 9, 2);
+INSERT INTO Producto(id_Producto,folioAlfanumerico,tipoProducto,numVistas,precioVenta,copiasVendidas,copiasExistentes,copiasDefectuosas) VALUES (2, '2AA', 'Video Juego', 4, 431.99, 4, 2, 0);
+INSERT INTO Producto(id_Producto,folioAlfanumerico,tipoProducto,numVistas,precioVenta,copiasVendidas,copiasExistentes,copiasDefectuosas) VALUES (3, '2BA', 'Video Juego', 150, 999.99, 80, 69, 0);
+INSERT INTO Producto(id_Producto,folioAlfanumerico,tipoProducto,numVistas,precioVenta,copiasVendidas,copiasExistentes,copiasDefectuosas) VALUES (4, '4CAF', 'Video Juego', 4, 431.99, 4, 2, 0);
+INSERT INTO Producto(id_Producto,folioAlfanumerico,tipoProducto,numVistas,precioVenta,copiasVendidas,copiasExistentes,copiasDefectuosas) VALUES (5, '5FEQ', 'Video Juego', 4, 999.99, 450, 300, 10);
 
 
 
 ---
 --4_Pelicula
 ---
-INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES();
-
+INSERT INTO Pelicula(Producto_id_Producto,NomPeli,Genero,Duracion,Clasificacion,FormatoVideo)VALUES(1,'La forma del agua','Thriller','Duracion','B15','Digital');
 
 
 ---
 --5_AlbumMusical
 ---
-INSERT INTO AlbumMusical(Producto_id_Producto,NomCancion,Artista,Album,Disquera) VALUES();
 
+INSERT INTO AlbumMusical(Producto_id_Producto,NomCancion,Artista,Album,Disquera) VALUES(1,'La calma','Pastora Soler','La calma','EuroMusic');
 ---
 ---6_VideoJuego
 ---
@@ -84,6 +101,8 @@ INSERT INTO VideoJuego(Producto_id_Producto,NomVjuego,Consola,Descripcion) VALUE
 INSERT INTO VideoJuego(Producto_id_Producto,NomVjuego,Consola,Descripcion) VALUES (33,'The Surfer','PS3 ','The Surfer es un arcade a puntos que permite jugar eligiendo una amplia variedad de sitios');
 INSERT INTO VideoJuego(Producto_id_Producto,NomVjuego,Consola,Descripcion) VALUES (34,'Batman - The Telltale Series','PS3 ','Introdúcete en el espíritu fracturado de Bruce Wayne como el Dark Knight');
 INSERT INTO VideoJuego(Producto_id_Producto,NomVjuego,Consola,Descripcion) VALUES (35,'DOA5LR: Luchadores básicos','PS4 ','Dead or Alive 5 Last Round: ¡la lucha de entretenimiento definitiva!');
+
+
 
 
 
@@ -149,25 +168,32 @@ INSERT INTO Compra(Id_Compra,Producto_id_Producto,OrdenCompra_id_OrdenCompra,Pro
 
 
 
---13_TarCredito
-INSERT INTO TarCredito(FormaPago_id_FormaPago,MesVen,TipoTarjeta(3),NumSeguridad,NumTarjeta) VALUES(1,01,'Visa',555,4848340526178171);
-INSERT INTO TarCredito(FormaPago_id_FormaPago,MesVen,TipoTarjeta(3),NumSeguridad,NumTarjeta) VALUES(2,02,'Visa',545,4028027558957067);
-INSERT INTO TarCredito(FormaPago_id_FormaPago,MesVen,TipoTarjeta(3),NumSeguridad,NumTarjeta) VALUES(3,03,'Visa',236,4222384909141329);
-INSERT INTO TarCredito(FormaPago_id_FormaPago,MesVen,TipoTarjeta(3),NumSeguridad,NumTarjeta) VALUES(4,04,'Master Card',288,5338033068035032);
-INSERT INTO TarCredito(FormaPago_id_FormaPago,MesVen,TipoTarjeta(3),NumSeguridad,NumTarjeta) VALUES(5,05,'American Express',455,373510159518627);
+--13_Tcredito
+
+INSERT INTO Tcredito(FormaPago_id_FormaPago,MesVen,TipoTarjeta(3),NumSeguridad,NumTarjeta) VALUES(1,01,'Visa',555,4848340526178171);
+INSERT INTO Tcredito(FormaPago_id_FormaPago,MesVen,TipoTarjeta(3),NumSeguridad,NumTarjeta) VALUES(2,02,'Visa',545,4028027558957067);
+INSERT INTO Tcredito(FormaPago_id_FormaPago,MesVen,TipoTarjeta(3),NumSeguridad,NumTarjeta) VALUES(3,03,'Visa',236,4222384909141329);
+INSERT INTO Tcredito(FormaPago_id_FormaPago,MesVen,TipoTarjeta(3),NumSeguridad,NumTarjeta) VALUES(4,04,'Master Card',288,5338033068035032);
+INSERT INTO Tcredito(FormaPago_id_FormaPago,MesVen,TipoTarjeta(3),NumSeguridad,NumTarjeta) VALUES(5,05,'American Express',455,373510159518627);
+
 
 
 --14_Transferencia
 
 
-INSERT INTO Transferencia(FormaPago_id_FormaPago,CLABE) VALUES(FormaPago_id_FormaPago,CLABE);
-
+INSERT INTO Transferencia(FormaPago_id_FormaPago,CLABE) VALUES(1,000000154789645217);
+INSERT INTO Transferencia(FormaPago_id_FormaPago,CLABE) VALUES(2,878982654684684844);
+INSERT INTO Transferencia(FormaPago_id_FormaPago,CLABE) VALUES(3,877511154789645217);
+INSERT INTO Transferencia(FormaPago_id_FormaPago,CLABE) VALUES(4,999881154789645217);
+INSERT INTO Transferencia(FormaPago_id_FormaPago,CLABE) VALUES(5,555555154789645217);
 
 -- 15_Streaming
 
-INSERT INTO Streaming(ModAdquisicion_id_ModAdquisicion,URL,NumReproducciones)
- VALUES(ModAdquisicion_id_ModAdquisicion,URL,NumReproducciones);
-
+INSERT INTO Streaming(ModAdquisicion_id_ModAdquisicion,URL,NumReproducciones)VALUES(1,www.Revenant/31A.com,100);
+INSERT INTO Streaming(ModAdquisicion_id_ModAdquisicion,URL,NumReproducciones)VALUES(2,www.Experimental/32A.com,200);
+INSERT INTO Streaming(ModAdquisicion_id_ModAdquisicion,URL,NumReproducciones)VALUES(3,www.Batman/34A.com,300);
+INSERT INTO Streaming(ModAdquisicion_id_ModAdquisicion,URL,NumReproducciones)VALUES(4,www.DOA5LR/35A.com,400);
+INSERT INTO Streaming(ModAdquisicion_id_ModAdquisicion,URL,NumReproducciones)VALUES(5,www.Revenant/31A.com,100);
 
 
 
@@ -193,9 +219,11 @@ INSERT INTO Paqueteria(ModAdquisicion_id_ModAdquisicion,EnvioPaquete_id_EnvioPaq
 ---
 --- 17_HistoricoPrecioProducto
 ---
-INSERT INTO HistoricoPrecioProducto(id_PrecioHistorico,Producto_id_Producto,PeriodoPrecio,Precio)
-VALUES (id_PrecioHistorico,Producto_id_Producto,'PeriodoPrecio',Precio);
-
+INSERT INTO HistoricoPrecioProducto(id_PrecioHistorico,Producto_id_Producto,PeriodoPrecio,Precio) VALUES (1,31,TO_DATE('2018/04/09','YYYY/MM/DD'),300);
+INSERT INTO HistoricoPrecioProducto(id_PrecioHistorico,Producto_id_Producto,PeriodoPrecio,Precio) VALUES (2,32,TO_DATE('2018/04/09','YYYY/MM/DD'),400);
+INSERT INTO HistoricoPrecioProducto(id_PrecioHistorico,Producto_id_Producto,PeriodoPrecio,Precio) VALUES (3,33,TO_DATE('2018/04/09','YYYY/MM/DD'),500);
+INSERT INTO HistoricoPrecioProducto(id_PrecioHistorico,Producto_id_Producto,PeriodoPrecio,Precio) VALUES (4,34,TO_DATE('2018/04/09','YYYY/MM/DD'),600);
+INSERT INTO HistoricoPrecioProducto(id_PrecioHistorico,Producto_id_Producto,PeriodoPrecio,Precio) VALUES (5,35,TO_DATE('2018/04/09','YYYY/MM/DD'),300);
 
 ---Cerrando Transacción iVirtual Store 36
 commit;
