@@ -239,3 +239,7 @@ CREATE TABLE Seguimiento (
     CONSTRAINT s_EnvioPaquete_id_envioPaquete_fk FOREIGN KEY (EnvioPaquete_id_envioPaquete)
       REFERENCES EnvioPaquete(id_envioPaquete)
 );
+
+
+
+
